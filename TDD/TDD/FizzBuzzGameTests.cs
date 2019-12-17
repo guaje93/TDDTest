@@ -14,15 +14,20 @@ namespace TDD
 
         }
 
-        [Fact]
-        public void When_input_is_1_should_return_one()
+        [Theory,
+            InlineData(1, "1"),
+        InlineData(2, "2"),
+        InlineData(3, "Fizz"),
+        InlineData(5, "Buzz"),
+        InlineData(15, "Fizz buzz")]
+        public void Should_return_values_according_to_FizzBuzz_games_roles(int input, string expected)
         {
             //arrange
             var game = new FizzBuzzGame();
             //act
-            var result = game.Play(1);
+            var result = game.Play(input);
             //assert
-            Assert.Equal("1", result);    
+            Assert.Equal(expected, result);
         }
 
         [Fact]
