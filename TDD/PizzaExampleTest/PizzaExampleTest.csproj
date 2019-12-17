@@ -6,11 +6,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{80ECC3FC-93C3-4572-A1C8-158EA94C1491}</ProjectGuid>
+    <ProjectGuid>{2F81F010-38FD-4F14-9977-51ACA02553C3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PizzaOrderSystem</RootNamespace>
-    <AssemblyName>PizzaOrderSystem</AssemblyName>
+    <RootNamespace>PizzaExampleTest</RootNamespace>
+    <AssemblyName>PizzaExampleTest</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -57,10 +57,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Order.cs" />
-    <Compile Include="OrderPosition.cs" />
-    <Compile Include="PizzaGroup.cs" />
+    <Compile Include="PizzaTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PizzaOrderSystem\PizzaOrderSystem.csproj">
+      <Project>{80ecc3fc-93c3-4572-a1c8-158ea94c1491}</Project>
+      <Name>PizzaOrderSystem</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

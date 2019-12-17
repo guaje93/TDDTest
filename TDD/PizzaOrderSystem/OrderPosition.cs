@@ -1,4 +1,7 @@
-﻿namespace PizzaOrderSystem
+﻿using System.Runtime.CompilerServices;
+
+    [assembly:InternalsVisibleTo("PizzaExampleTest)")]
+namespace PizzaOrderSystem
 {
     internal class OrderPosition
     {
