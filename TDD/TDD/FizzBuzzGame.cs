@@ -10,6 +10,8 @@ namespace TDD
 
         internal string Play(int input)
         {
+
+            if (input < 1) throw new InvalidArgumentException();
             if (DivisibleBy15(input))
                 return "Fizz buzz";
             if (DivisibleBy3(input))

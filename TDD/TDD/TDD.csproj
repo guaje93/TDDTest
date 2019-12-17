@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="FizzBuzzGame.cs" />
     <Compile Include="FizzBuzzGameTests.cs" />
+    <Compile Include="InvalidArgumentException.cs" />
     <Compile Include="XUnit_ExampleTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
