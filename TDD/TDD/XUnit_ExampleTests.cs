@@ -9,6 +9,10 @@ namespace TDD
 {
     public class XUnit_ExampleTests : IDisposable
     {
+        public XUnit_ExampleTests()
+        {
+
+        }
 
         [Fact]
         public void Unit_test_example()
