@@ -10,13 +10,15 @@ namespace PizzaOrderSystem
     {
         private IList<OrderPosition> _positions = new List<OrderPosition>();
 
+        internal IList<OrderPosition> Positions { get => _positions; }
+
         public Order()
         {
         }
 
         internal void Add(OrderPosition orderPosition)
         {
-            _positions.Add(orderPosition);
+            Positions.Add(orderPosition);
         }
 
         internal bool IsValid()
@@ -26,7 +28,7 @@ namespace PizzaOrderSystem
 
         private bool GroupedByNamePiecesAreDivisableBy4()
         {
-            return _positions.GroupBy(p => p.Name)
+            return Positions.GroupBy(p => p.Name)
                                          .Select(p => new
                                          {
                                              PizzaName = p.Key,
@@ -38,7 +40,39 @@ namespace PizzaOrderSystem
 
         private bool AllPiecesAreDivisibleBy8()
         {
-            return _positions.Sum(p => p.Pieces) % 8 == 0;
+            return Positions.Sum(p => p.Pieces) % 8 == 0;
+        }
+    }
+
+    public class Billing
+    {
+        private Menu menu;
+
+        public Billing(Menu menu)
+        {
+            this.menu = menu;
+        }
+
+        internal Dictionary<string, double> Calculate(Order order)
+        {
+            var dict = new Dictionary<string, double>();
+            var val = order.Positions.GroupBy(p => p.Name).Select(p => new
+            {
+                Name = p.Key,
+                Value = p.Sum(g => Price(g.PizzaName, g.Pieces))
+            });
+            foreach (var item in val)
+            {
+                dict.Add(item.Name, item.Value);
+            }
+
+            return dict;
+        }
+
+        private double Price(string pizzaName, int pieces)
+        {
+            return this.menu.GetPizzaPrice(pizzaName) / 8 * pieces;
+
         }
     }
 }
