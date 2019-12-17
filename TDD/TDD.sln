@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29403.142
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anatomia", "Anatomia\Anatomia.csproj", "{0DAA694C-8D43-4F7B-95C1-6BFB8FF25663}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDD", "TDD\TDD.csproj", "{4480619A-C98F-4ED7-B9C1-78A75EAC6B4B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0DAA694C-8D43-4F7B-95C1-6BFB8FF25663}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DAA694C-8D43-4F7B-95C1-6BFB8FF25663}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DAA694C-8D43-4F7B-95C1-6BFB8FF25663}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DAA694C-8D43-4F7B-95C1-6BFB8FF25663}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4480619A-C98F-4ED7-B9C1-78A75EAC6B4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4480619A-C98F-4ED7-B9C1-78A75EAC6B4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4480619A-C98F-4ED7-B9C1-78A75EAC6B4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4480619A-C98F-4ED7-B9C1-78A75EAC6B4B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4291A404-04BF-4876-A49B-FA3EB6DB882B}
+	EndGlobalSection
+EndGlobal
